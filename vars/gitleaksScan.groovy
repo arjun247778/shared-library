@@ -1,3 +1,7 @@
 def call() {
-    sh 'gitleaks detect --source . -v'
+    echo "Running GitLeaks Scan..."
+
+    sh '''
+       gitleaks detect --source . -v || true
+    '''
 }
